@@ -1,0 +1,3 @@
+/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/CMakeFiles/rebuild_cache.dir
+/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/CMakeFiles/main.dir
+/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/CMakeFiles/edit_cache.dir

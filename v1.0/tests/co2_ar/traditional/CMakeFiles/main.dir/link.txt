@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -O3 -Wall -Wextra   CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/matrix_euler.cpp.o  -o main /home/artfin/Desktop/libs/sundials-4.1.0/instdir/lib/libsundials_nvecserial.a /home/artfin/Desktop/libs/sundials-4.1.0/instdir/lib/libsundials_cvode.a 
