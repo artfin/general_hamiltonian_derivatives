@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar
+CMAKE_SOURCE_DIR = /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar
+CMAKE_BINARY_DIR = /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/main.cpp
 
 CMakeFiles/main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/main.cpp > CMakeFiles/main.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/main.cpp > CMakeFiles/main.dir/main.cpp.i
 
 CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/main.cpp -o CMakeFiles/main.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
 CMakeFiles/main.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/main.dir/main.cpp.o.provides.build: CMakeFiles/main.dir/main.cpp.o
 
 CMakeFiles/main.dir/matrix_euler.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/matrix_euler.cpp.o: matrix_euler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/matrix_euler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/matrix_euler.cpp.o -c /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/matrix_euler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/matrix_euler.cpp.o -c /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.cpp
 
 CMakeFiles/main.dir/matrix_euler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/matrix_euler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.cpp > CMakeFiles/main.dir/matrix_euler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.cpp > CMakeFiles/main.dir/matrix_euler.cpp.i
 
 CMakeFiles/main.dir/matrix_euler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/matrix_euler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.cpp -o CMakeFiles/main.dir/matrix_euler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.cpp -o CMakeFiles/main.dir/matrix_euler.cpp.s
 
 CMakeFiles/main.dir/matrix_euler.cpp.o.requires:
 
@@ -119,7 +119,7 @@ main: CMakeFiles/main.dir/build.make
 main: /home/artfin/Desktop/libs/sundials-4.1.0/instdir/lib/libsundials_nvecserial.a
 main: /home/artfin/Desktop/libs/sundials-4.1.0/instdir/lib/libsundials_cvode.a
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -137,6 +137,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

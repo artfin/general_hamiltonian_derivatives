@@ -76,10 +76,9 @@ int main()
         std::cout << analytic << "\t" << numeric << "\t" << difference << std::endl;
     }
 
-    /*
     std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
 
-	const int cycles = 1e7;
+	const int cycles = 1e5;
 	for ( long k = 0; k < cycles; ++k ) {
         ham.compute_derivatives( y, ydot );
     }
@@ -89,7 +88,6 @@ int main()
 	auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 	std::cout << "Total duration: " << duration << " ns" << std::endl;
 	std::cout << "Duration per cycle: " << duration / cycles << " ns" << std::endl;	
-    */
 
     return 0;
 }

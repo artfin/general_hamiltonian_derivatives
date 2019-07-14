@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/main.cpp" "/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/CMakeFiles/main.dir/main.cpp.o"
-  "/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.cpp" "/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/CMakeFiles/main.dir/matrix_euler.cpp.o"
+  "/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/main.cpp" "/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/CMakeFiles/main.dir/main.cpp.o"
+  "/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.cpp" "/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/CMakeFiles/main.dir/matrix_euler.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

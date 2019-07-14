@@ -45,7 +45,7 @@ int main()
 
     std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
 
-	const int cycles = 1e7;
+	const int cycles = 1e5;
 	for ( long k = 0; k < cycles; ++k ) {
         matrixEuler.syst( 0.0, y, ydot, nullptr ); 
     }

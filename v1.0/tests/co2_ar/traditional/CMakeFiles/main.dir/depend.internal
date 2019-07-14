@@ -19,8 +19,8 @@ CMakeFiles/main.dir/main.cpp.o
  /home/artfin/Desktop/libs/sundials-4.1.0/instdir/include/sunmatrix/sunmatrix_dense.h
  /home/artfin/Desktop/repos/common_h/constants.hpp
  /home/artfin/Desktop/repos/common_h/masses.hpp
- /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/main.cpp
- /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.hpp
+ /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/main.cpp
+ /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.hpp
  /usr/local/include/eigen3/Eigen/Cholesky
  /usr/local/include/eigen3/Eigen/Core
  /usr/local/include/eigen3/Eigen/Dense
@@ -251,8 +251,8 @@ CMakeFiles/main.dir/matrix_euler.cpp.o
  /home/artfin/Desktop/libs/sundials-4.1.0/instdir/include/sunmatrix/sunmatrix_dense.h
  /home/artfin/Desktop/repos/common_h/constants.hpp
  /home/artfin/Desktop/repos/common_h/masses.hpp
- /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.cpp
- /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.hpp
+ /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.cpp
+ /home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.hpp
  /usr/local/include/eigen3/Eigen/Cholesky
  /usr/local/include/eigen3/Eigen/Core
  /usr/local/include/eigen3/Eigen/Dense

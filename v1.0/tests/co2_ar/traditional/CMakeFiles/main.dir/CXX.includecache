@@ -116,7 +116,7 @@ cmath
 constants.hpp
 /home/artfin/Desktop/repos/common_h/constants.hpp
 
-/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/main.cpp
+/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/main.cpp
 iostream
 -
 chrono
@@ -140,13 +140,13 @@ cvode/cvode_direct.h
 sundials/sundials_types.h
 -
 matrix_euler.hpp
-/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.hpp
+/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.hpp
 
-/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.cpp
+/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.cpp
 matrix_euler.hpp
-/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.hpp
+/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.hpp
 
-/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/matrix_euler.hpp
+/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/matrix_euler.hpp
 iostream
 -
 cmath
@@ -166,7 +166,7 @@ cvode/cvode_direct.h
 sundials/sundials_types.h
 -
 masses.hpp
-/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/masses.hpp
+/home/artfin/Desktop/repos/generalHamDerivatives/v1.0/tests/co2_ar/traditional/masses.hpp
 
 /usr/local/include/eigen3/Eigen/Cholesky
 Core
