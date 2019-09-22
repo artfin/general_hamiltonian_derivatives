@@ -134,27 +134,51 @@ public:
         }
     }
 
-    static void cp( N_Vector nv, Eigen::Matrix<double, _TOTAL_N, 1> & m )
+    template <int Eigen_matrix_size>
+    static void cp( N_Vector nv, Eigen::Matrix<double, Eigen_matrix_size, 1> & m )
     {
-        for ( int k = 0; k < _TOTAL_N; ++k ) {
+        for ( int k = 0; k < Eigen_matrix_size; ++k ) {
             m(k) = NV_Ith_S(nv, k);
         }
     } 
 
-    static void cp( Eigen::Matrix<double, _TOTAL_N, 1> const& m, N_Vector nv )
+    template <int Eigen_matrix_size>
+    static void cp( Eigen::Matrix<double, Eigen_matrix_size, 1> const& m, N_Vector nv )
     {
-        for ( int k = 0; k < _TOTAL_N; ++k ) { 
+        for ( int k = 0; k < Eigen_matrix_size; ++k ) { 
             NV_Ith_S(nv, k) = m(k);
+        }
+    }
+
+    template <int Eigen_matrix_size>
+    static void cp( std::vector<double> const& v, Eigen::Matrix<double, Eigen_matrix_size, 1> & m ) 
+    {
+        for ( int k = 0; k < _TOTAL_N; ++k ) {
+            m(k) = v[k];
         }
     } 
 
-    double compute_hamiltonian( N_Vector y )
+    template <int Eigen_matrix_size>
+    static void cp( Eigen::Matrix<double, Eigen_matrix_size, 1> & m, std::vector<double> & v )
+    {
+        for ( int k = 0; k < Eigen_matrix_size; ++k ) {
+            v[k] = m(k);
+        }
+    } 
+
+    static double compute_hamiltonian( std::vector<double> const& y )
+    {
+        cp(y, ycp);
+        return compute_hamiltonian( ycp );
+    } 
+
+    static double compute_hamiltonian( N_Vector y )
     {
         cp(y, ycp);
         return compute_hamiltonian( ycp );
     }
 
-    double compute_hamiltonian( Eigen::Matrix<double, _TOTAL_N, 1> const& y )
+    static double compute_hamiltonian( Eigen::Matrix<double, _TOTAL_N, 1> const& y )
     {
         initialize( y );
 
@@ -183,7 +207,14 @@ public:
 
         return temp; 
     }
-   
+  
+    static void compute_derivatives( std::vector<double> const& y, std::vector<double> & ydot )
+    {
+        cp( y, ycp );
+        compute_derivatives( ycp, ydotcp );
+        cp( ydotcp, ydot );
+    }
+
     static int compute_derivatives( realtype t, N_Vector y, N_Vector ydot, void * user_data )
     {
         (void)(t);

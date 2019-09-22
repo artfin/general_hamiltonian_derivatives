@@ -1,0 +1,5 @@
+/media/artfin/HDD-WD/repos/generalHamDerivatives/v1.0/trajectory-python-integration/CMakeFiles/rebuild_cache.dir
+/media/artfin/HDD-WD/repos/generalHamDerivatives/v1.0/trajectory-python-integration/CMakeFiles/compute-trajectory.dir
+/media/artfin/HDD-WD/repos/generalHamDerivatives/v1.0/trajectory-python-integration/CMakeFiles/edit_cache.dir
+/media/artfin/HDD-WD/repos/generalHamDerivatives/v1.0/trajectory-python-integration/CMakeFiles/compute-derivatives.dir
+/media/artfin/HDD-WD/repos/generalHamDerivatives/v1.0/trajectory-python-integration/CMakeFiles/compute-hamiltonian.dir

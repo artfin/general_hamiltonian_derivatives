@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -O3 -Wall -Wextra   CMakeFiles/compute-derivatives.dir/compute-derivatives.cpp.o  -o compute-derivatives /home/artfin/Desktop/libs/sundials-4.1.0/instdir/lib/libsundials_nvecserial.a /home/artfin/Desktop/libs/sundials-4.1.0/instdir/lib/libsundials_cvode.a /home/artfin/Desktop/repos/common_h/co2_ar/ai_pes_co2ar.o 
