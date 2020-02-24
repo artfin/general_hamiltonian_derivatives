@@ -17,6 +17,7 @@ class HamiltonianDerivatives
 {
 public:
     const static int _TOTAL_N = 2 * _N + 6;
+    const static int _TOTAL_N_J = 2 * _N + 3;
     int getDIM() const { return _TOTAL_N; }
 
     typedef std::function<void(Eigen::Ref<Eigen::Matrix<double, IT_SIZE, IT_SIZE>>,
@@ -134,6 +135,21 @@ public:
         }
     }
 
+    static void initialize_J( Eigen::Matrix<double, _TOTAL_N_J, 1> const& y ) 
+    {
+        for ( int k = 0; k < _N; ++k ) {
+            q[k] = QData( y(2 * k) );
+        }
+
+        for ( int k = 0; k < _N; ++k ) {
+            p(k) = y(2 * k + 1);
+        }
+
+        J(0) = y(2 * _N);
+        J(1) = y(2 * _N + 1);
+        J(2) = y(2 * _N + 2);
+    }
+
     template <int Eigen_matrix_size>
     static void cp( N_Vector nv, Eigen::Matrix<double, Eigen_matrix_size, 1> & m )
     {
@@ -153,7 +169,7 @@ public:
     template <int Eigen_matrix_size>
     static void cp( std::vector<double> const& v, Eigen::Matrix<double, Eigen_matrix_size, 1> & m ) 
     {
-        for ( int k = 0; k < _TOTAL_N; ++k ) {
+        for ( int k = 0; k < Eigen_matrix_size; ++k ) {
             m(k) = v[k];
         }
     } 
@@ -207,6 +223,40 @@ public:
 
         return temp; 
     }
+    
+    static double compute_hamiltonian_J( std::vector<double> const& y )
+    {
+        cp(y, yJcp);
+        return compute_hamiltonian_J( yJcp );
+    } 
+
+    static double compute_hamiltonian_J( Eigen::Matrix<double, _TOTAL_N_J, 1> const& y )
+    {
+        initialize_J( y );
+		
+        IT.fill( q );
+		A.fill( q );
+		a.fill( q );
+		
+        ITI = IT.get().inverse();
+        ainv = a.get().inverse();
+        
+        G11 = (IT.get() - A.get() * ainv * A.get().transpose()).inverse();
+    	G22 = (a.get() - A.get().transpose() * ITI * A.get()).inverse();
+    	G12 = - G11 * A.get() * ainv;
+            
+        double temp = 0.0;
+        temp += 0.5 * J.transpose() * G11 * J;
+        temp += 0.5 * p.transpose() * G22 * p;
+        temp += J.transpose() * G12 * p;
+
+        if ( POTENTIAL_SET ) {
+            temp += potential( q );
+        }
+
+        return temp; 
+
+    }
   
     static void compute_derivatives( std::vector<double> const& y, std::vector<double> & ydot )
     {
@@ -226,6 +276,11 @@ public:
 
         return 0;
     } 
+
+    static Eigen::Vector3d get_J()
+    {
+        return J;
+    }
 
     static void compute_derivatives( Eigen::Matrix<double, _TOTAL_N, 1> const& y, Eigen::Matrix<double, _TOTAL_N, 1> & ydot )
 	// format of input vector:
@@ -317,7 +372,9 @@ public:
                 ydot(2 * k + 1) = - temp;
             }
         }
-		
+
+        // derivative with respect to phi_euler 
+        ydot(2 * _N + 1) = 0;    
         for ( int k = 0; k < 2; ++k )
 		{
 			double temp = 0.0;
@@ -330,8 +387,9 @@ private:
     static std::vector<QData> q; // generalized coordinates
     static Eigen::Matrix<double, _N, 1> p; // generalized momenta
 
-    static Eigen::Matrix<double, 2*_N+6, 1> ycp;
-    static Eigen::Matrix<double, 2*_N+6, 1> ydotcp;
+    static Eigen::Matrix<double, 2*_N + 6, 1> ycp;
+    static Eigen::Matrix<double, 2*_N + 6, 1> ydotcp;
+    static Eigen::Matrix<double, 2*_N + 3, 1> yJcp;
 
     static std::vector<QData> euler_angles;
     static Eigen::Matrix<double, 3, 1> pe; 
@@ -394,6 +452,9 @@ Eigen::Matrix<double, 2*_N+6, 1> HamiltonianDerivatives<_N>::ycp = Eigen::Matrix
 
 template<int _N>
 Eigen::Matrix<double, 2*_N+6, 1> HamiltonianDerivatives<_N>::ydotcp = Eigen::Matrix<double, 2*_N+6, 1>::Zero(2*_N+6, 1);
+
+template<int _N>
+Eigen::Matrix<double, 2*_N + 3, 1> HamiltonianDerivatives<_N>::yJcp = Eigen::Matrix<double, 2*_N + 3, 1>::Zero(2 * _N + 3, 1);
 
 template<int _N>
 std::vector<QData> HamiltonianDerivatives<_N>::euler_angles;
